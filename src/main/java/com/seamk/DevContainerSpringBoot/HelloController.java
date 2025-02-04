@@ -1,6 +1,7 @@
 package com.seamk.DevContainerSpringBoot;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 public class HelloController {
@@ -13,5 +14,10 @@ public class HelloController {
     @ResponseBody
     public String goodbye() {
         return "Goodbye, World!";
+    }
+    @PostMapping("/hello")
+    @ResponseBody
+    public String helloPost() {
+        return "Hello, World!";
     }
 }
